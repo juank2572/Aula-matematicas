@@ -3,11 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Laboratorio de Matemáticas – 6.º y 7.º</title>
+  <title>Laboratorio de Matemáticas – Inicio</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-   <header class="top-bar">
+  <div class="math-panel left"></div>
+  <div class="math-panel right"></div>
+
+  <header class="top-bar">
     <div class="brand-row">
       <div class="brand-left">
         <img src="logo.png" alt="Logo Cajasan" class="logo-cajasan" />
@@ -19,152 +22,35 @@
     </div>
 
     <h1>Laboratorio de Matemáticas</h1>
-    <p>Recursos, práctica y videos para 6.º y 7.º grado</p>
-    <nav class="main-nav">
-      <a href="#tema">Tema guía</a>
-      <a href="#practica">Práctica</a>
-      <a href="#videos">Videos</a>
-      <a href="#extra">Material extra</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
+    <p>Selecciona tu grado para ver los temas, práctica y videos.</p>
   </header>
 
-
   <main class="container">
-    <!-- Sección tema Tema guía -->
-    <section id="tema" class="card card-tema">
-      <h2>➗ Tema guía No. 1</h2>
-      <p><strong>[TEORIA DE NUMEROS]</strong></p>
-      <ul>
-        <li>Comprender el significado del tema y su utilidad en la vida diaria.</li>
-        <li>Reconocer vocabulario clave y representaciones habituales.</li>
-        <li>Prepararse para resolver ejercicios en el cuaderno y en línea.</li>
-      </ul>
+    <section class="card card-tema">
+      <h2>📚 ¿De qué grado eres?</h2>
       <p class="nota">
-        Cada semana actualizaré esta sección con el nuevo tema que estemos trabajando en clase.
-        Revisa siempre primero esta parte antes de hacer la práctica.
+        Haz clic en tu grado para ir a tu aula virtual de matemáticas.
       </p>
-    </section>
 
-    <!-- Sección práctica -->
-    <section id="practica" class="card card-practica">
-      <h2>➕ Práctica recomendada</h2>
-      <p>
-        Sigue estos pasos para practicar el tema de esta semana. Ten tu cuaderno a la mano
-        para copiar ejemplos y resultados importantes.
-      </p>
-      <ol class="steps">
-        <li>Lee el “Tema de la semana”.</li>
-        <li>Realiza los ejercicios 1 y 2 en línea.</li>
-        <li>Resuelve los ejercicios indicados en tu cuaderno.</li>
-        <li>Envía la evidencia por Classroom o como se indicó en clase.</li>
-      </ol>
+      <div class="grado-grid">
+        <article class="grado-card">
+          <h3>Grado 6.º</h3>
+          <p>Temas, guías y videos pensados para estudiantes de sexto.</p>
+          <a class="grado-link" href="sexto.html">Entrar a 6.º</a>
+        </article>
 
-      <div class="links-grid">
-        <div class="link-card">
-          <h3>Ejercicios interactivos 1</h3>
-          <p>Practica los conceptos básicos del tema con actividades guiadas.</p>
-          <a href="https://www.ejemplo.com/ejercicios1" target="_blank" rel="noopener">
-            Ir a practicar
-          </a>
-        </div>
-        <div class="link-card">
-          <h3>Ejercicios interactivos 2</h3>
-          <p>Problemas de nivel medio para reforzar lo aprendido.</p>
-          <a href="https://www.ejemplo.com/ejercicios2" target="_blank" rel="noopener">
-            Ir a practicar
-          </a>
-        </div>
-        <div class="link-card">
-          <h3>Autoevaluación</h3>
-          <p>Cuestionario corto para revisar si comprendiste el tema.</p>
-          <a href="https://www.ejemplo.com/quiz" target="_blank" rel="noopener">
-            Hacer el quiz
-          </a>
-        </div>
+        <article class="grado-card">
+          <h3>Grado 7.º</h3>
+          <p>Temas, guías y videos pensados para estudiantes de séptimo.</p>
+          <a class="grado-link" href="septimo.html">Entrar a 7.º</a>
+        </article>
       </div>
-    </section>
-
-    <!-- Sección videos -->
-    <section id="videos" class="card card-videos">
-      <h2>📐 Videos del tema</h2>
-      <p>
-        Mira estos videos en el orden sugerido. Puedes pausar, retroceder y tomar apuntes.
-        Si no entiendes algo, anótalo para preguntarlo en clase.
-      </p>
-
-      <div class="video-grid">
-        <div class="video-card">
-          <h3>Video 1 – Introducción</h3>
-          <p>Presentación general del tema con ejemplos sencillos.</p>
-          <a href="https://www.youtube.com/" target="_blank" rel="noopener">
-            Ver en YouTube
-          </a>
-        </div>
-        <div class="video-card">
-          <h3>Video 2 – Ejemplos resueltos</h3>
-          <p>Ejercicios paso a paso para que puedas seguirlos en tu cuaderno.</p>
-          <a href="https://www.youtube.com/" target="_blank" rel="noopener">
-            Ver en YouTube
-          </a>
-        </div>
-        <div class="video-card">
-          <h3>Video 3 – Desafíos</h3>
-          <p>Retos para estudiantes que quieran profundizar un poco más.</p>
-          <a href="https://www.youtube.com/" target="_blank" rel="noopener">
-            Ver en YouTube
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Sección material extra -->
-    <section id="extra" class="card card-extra">
-      <h2>📊 Material extra</h2>
-      <p>
-        Aquí encontrarás recursos adicionales por si quieres repasar más o si no pudiste
-        asistir a clase.
-      </p>
-      <ul>
-        <li>
-          <a href="https://www.ejemplo.com/guia.pdf" target="_blank" rel="noopener">
-            Guía en PDF del tema
-          </a>
-        </li>
-        <li>
-          <a href="https://www.ejemplo.com/geogebra" target="_blank" rel="noopener">
-            Actividad interactiva (GeoGebra / similar)
-          </a>
-        </li>
-        <li>
-          <a href="https://www.ejemplo.com/banco-problemas" target="_blank" rel="noopener">
-            Banco de problemas adicionales
-          </a>
-        </li>
-      </ul>
-    </section>
-
-    <!-- Sección contacto -->
-    <section id="contacto" class="card">
-      <h2>Contacto y dudas</h2>
-      <p>
-        Si tienes preguntas sobre el tema, la práctica o los videos, utiliza alguno
-        de estos medios (según lo que usemos en el colegio):
-      </p>
-      <ul>
-        <li>Correo institucional del profesor: <strong>profe@colegio.edu.co</strong></li>
-        <li>Google Classroom: revisa la sección de comentarios de la tarea.</li>
-        <li>Otro medio acordado con el grupo (por ejemplo, plataforma del colegio).</li>
-      </ul>
-      <p class="nota">
-        Recuerda escribir siempre con respeto, incluir tu nombre, curso y explicar
-        claramente tu duda.
-      </p>
     </section>
   </main>
 
   <footer class="footer">
-    <p>Laboratorio de Matemáticas – Sitio para uso educativo con estudiantes de 6.º y 7.º.</p>
+    <p>Laboratorio de Matemáticas – 6.º y 7.º · Uso educativo.</p>
   </footer>
 </body>
 </html>
+
