@@ -222,13 +222,14 @@ body {
 }
 
 .logo {
-  width: 80px;   /* antes 60px */
-  height: 80px;  /* antes 60px */
+  width: 110px;   /* más ancho */
+  height: 70px;   /* un poco menos alto */
   border-radius: 16px;
-  object-fit: cover;
+  object-fit: contain;   /* antes: cover */
   background: #ffffff;
   box-shadow: 0 4px 10px rgba(15, 23, 42, 0.18);
 }
+
 
 
 .top-bar h1 {
