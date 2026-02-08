@@ -14,12 +14,7 @@ body {
 
 
 /* Botones de grado */
-.grade-nav {
-  display: flex;
-  justify-content: flex-start;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-}
+
 
 .grade-tab {
   border-radius: 999px;
@@ -46,7 +41,7 @@ body {
   margin-top: 0.35rem;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 0.5rem;
 }
 
@@ -232,30 +227,6 @@ body {
   gap: 0.5rem;
   flex-wrap: wrap;
 }
-
-.main-nav {
-  margin-top: 0.35rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;   /* antes: flex-start */
-  gap: 0.5rem;
-}
-
-.main-nav a {
-  color: #0f4c92;
-  text-decoration: none;
-  padding: 0.3rem 0.9rem;
-  border-radius: 999px;
-  border: 1px solid rgba(15, 76, 146, 0.25);
-  font-size: 0.85rem;
-  background: #ffffff;
-}
-
-.main-nav a:hover {
-  background: #0f4c92;
-  color: #f9fafb;
-}
-
 .top-bar-inner {
   max-width: 960px;
   margin: 0 auto;
@@ -289,10 +260,6 @@ body {
 
 .author strong {
   letter-spacing: 0.04em;
-}
-.author span {
-  font-size: 0.85rem;
-  color: #6b7280;
 }
 .author span {
   font-size: 0.85rem;
