@@ -14,42 +14,96 @@ body {
 
 /* Barra superior */
 .top-bar {
-  background: #1d4ed8;
-  color: #f9fafb;
-  padding: 1.5rem 1rem 1rem;
-  text-align: center;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
 }
 
-.top-bar h1 {
-  font-size: 1.8rem;
-  margin-bottom: 0.25rem;
-}
-
-.top-bar p {
-  font-size: 0.95rem;
-  opacity: 0.9;
-}
-
-/* Menú */
-.main-nav {
-  margin-top: 0.75rem;
+.top-bar-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem 1rem;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
   gap: 0.75rem;
 }
 
-.main-nav a {
-  color: #e5e7eb;
-  text-decoration: none;
-  padding: 0.4rem 0.9rem;
+.top-bar h1 {
+  font-size: 1.6rem;
+  margin-bottom: 0.1rem;
+  color: #0f4c92; /* azul similar al logo */
+}
+
+.top-bar p {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* Logo a la izquierda */
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  object-fit: cover;
+  background: #ffffff;
+  box-shadow: 0 3px 8px rgba(15, 23, 42, 0.18);
+}
+
+/* Botones de grado */
+.grade-nav {
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.grade-tab {
   border-radius: 999px;
-  border: 1px solid rgba(239, 246, 255, 0.4);
+  border: 1px solid rgba(15, 76, 146, 0.25);
+  background: rgba(15, 23, 42, 0.03);
+  color: #0f4c92;
+  padding: 0.35rem 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.grade-tab:hover {
+  background: rgba(15, 76, 146, 0.1);
+}
+
+.grade-tab.active {
+  background: #0f4c92;
+  color: #f9fafb;
+  font-weight: 600;
+}
+
+/* Menú principal */
+.main-nav {
+  margin-top: 0.35rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+
+.main-nav a {
+  color: #0f4c92;
+  text-decoration: none;
+  padding: 0.3rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(15, 76, 146, 0.25);
   font-size: 0.85rem;
+  background: #ffffff;
 }
 
 .main-nav a:hover {
-  background: #2563eb;
+  background: #0f4c92;
+  color: #f9fafb;
 }
 
 /* Contenedor principal */
@@ -129,7 +183,7 @@ body {
 .video-card a {
   display: inline-block;
   text-decoration: none;
-  background: #1d4ed8;
+  background: #0f4c92;
   color: #f9fafb;
   padding: 0.35rem 0.8rem;
   border-radius: 999px;
@@ -149,55 +203,24 @@ body {
   padding: 1rem 0 1.5rem;
 }
 
+/* Utilidad */
+.hidden {
+  display: none;
+}
+
 /* Responsivo */
 @media (max-width: 640px) {
-  .top-bar h1 {
-    font-size: 1.4rem;
-  }
   .top-bar-inner {
-  max-width: 960px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
+    align-items: flex-start;
+  }
 
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  justify-content: center;
-}
+  .brand {
+    align-items: flex-start;
+  }
 
-.logo {
-  width: 52px;
-  height: 52px;
-  border-radius: 999px;
-  object-fit: cover;
-  background: #1e40af;
-}
-
-.grade-nav {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-}
-
-.grade-tab {
-  border-radius: 999px;
-  border: 1px solid rgba(239, 246, 255, 0.7);
-  background: transparent;
-  color: #e5e7eb;
-  padding: 0.35rem 0.9rem;
-  font-size: 0.85rem;
-  cursor: pointer;
-}
-
-.grade-tab.active {
-  background: #2563eb;
-  font-weight: 600;
-}
+  .top-bar h1 {
+    font-size: 1.3rem;
+  }
 
   .card {
     padding: 1rem 0.9rem;
