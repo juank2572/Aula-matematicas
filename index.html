@@ -8,8 +8,20 @@
 </head>
 <body>
   <header class="top-bar">
-    <h1>Aula de Matemáticas</h1>
-    <p>Recursos, práctica y videos para mis estudiantes</p>
+  <div class="top-bar-inner">
+    <div class="brand">
+      <img src="logo.png" alt="Logo del colegio" class="logo">
+      <div>
+        <h1>Aula de Matemáticas</h1>
+        <p>Recursos y práctica para 6.º y 7.º grado</p>
+      </div>
+    </div>
+
+    <nav class="grade-nav">
+      <button class="grade-tab active" data-grade="6">Grado sexto</button>
+      <button class="grade-tab" data-grade="7">Grado séptimo</button>
+    </nav>
+
     <nav class="main-nav">
       <a href="#tema">Tema de la semana</a>
       <a href="#practica">Práctica</a>
@@ -17,7 +29,9 @@
       <a href="#extra">Material extra</a>
       <a href="#contacto">Contacto</a>
     </nav>
-  </header>
+  </div>
+</header>
+
 
   <main class="container">
     <!-- Sección tema de la semana -->
