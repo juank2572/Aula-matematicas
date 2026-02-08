@@ -196,15 +196,6 @@ body {
   border-bottom: 1px solid #e5e7eb;
 }
 
-.top-bar-inner {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0.75rem 1rem 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-}
-
 .brand {
   display: flex;
   align-items: center;
@@ -256,4 +247,43 @@ body {
 .main-nav a:hover {
   background: #0f4c92;
   color: #f9fafb;
+}
+
+.top-bar-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem 1rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  align-items: center;      /* centra horizontalmente */
+  text-align: center;       /* centra textos */
+}
+
+.brand-text h1 {
+  font-size: 1.9rem;
+  margin-bottom: 0.1rem;
+  color: #0f4c92;
+}
+
+.brand-text p {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+.author {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+.author strong {
+  letter-spacing: 0.04em;
+}
+
+.author span {
+  font-size: 0.85rem;
+  color: #6b7280;
 }
