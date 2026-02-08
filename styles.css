@@ -12,37 +12,6 @@ body {
   line-height: 1.6;
 }
 
-/* Barra superior */
-.top-bar {
-  background: #ffffff;
-  border-bottom: 1px solid #e5e7eb;
-}
-
-.top-bar-inner {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0.75rem 1rem 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.top-bar h1 {
-  font-size: 1.6rem;
-  margin-bottom: 0.1rem;
-  color: #0f4c92;
-}
-
-.top-bar p {
-  font-size: 0.9rem;
-  color: #4b5563;
-}
 
 /* Logo a la izquierda */
 .logo {
@@ -229,4 +198,68 @@ body {
   .card {
     padding: 1rem 0.9rem;
   }
+}
+/* --- CABECERA NUEVA --- */
+.top-bar {
+  background: #ffffff;
+  color: #111827;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.top-bar-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  object-fit: cover;
+  background: #ffffff;
+  box-shadow: 0 3px 8px rgba(15, 23, 42, 0.18);
+}
+
+.top-bar h1 {
+  font-size: 1.6rem;
+  margin-bottom: 0.1rem;
+  color: #0f4c92;
+}
+
+.top-bar p {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+.main-nav {
+  margin-top: 0.35rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+
+.main-nav a {
+  color: #0f4c92;
+  text-decoration: none;
+  padding: 0.3rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(15, 76, 146, 0.25);
+  font-size: 0.85rem;
+  background: #ffffff;
+}
+
+.main-nav a:hover {
+  background: #0f4c92;
+  color: #f9fafb;
 }
