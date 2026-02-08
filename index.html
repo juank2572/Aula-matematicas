@@ -8,38 +8,36 @@
 </head>
 <body>
   <header class="top-bar">
-  <div class="top-bar-inner">
-    <div class="brand">
-      <img src="logo.png" alt="Logo del colegio" class="logo">
-      <div>
-        <h1>Aula de Matemáticas</h1>
-        <p>Recursos y práctica para 6.º y 7.º grado</p>
+    <div class="top-bar-inner">
+      <div class="brand">
+        <img src="logo.png" alt="Logo del colegio" class="logo">
+        <div>
+          <h1>Aula de Matemáticas</h1>
+          <p>Recursos y práctica para 6.º y 7.º grado</p>
+        </div>
       </div>
+
+      <nav class="grade-nav">
+        <button class="grade-tab active" data-grade="6">Grado sexto</button>
+        <button class="grade-tab" data-grade="7">Grado séptimo</button>
+      </nav>
+
+      <nav class="main-nav" id="main-nav">
+        <a href="#tema">Tema de la semana</a>
+        <a href="#practica">Práctica</a>
+        <a href="#videos">Videos</a>
+        <a href="#extra">Material extra</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
     </div>
-
-    <nav class="grade-nav">
-      <button class="grade-tab active" data-grade="6">Grado sexto</button>
-      <button class="grade-tab" data-grade="7">Grado séptimo</button>
-    </nav>
-
-    <nav class="main-nav" id="main-nav">
-      <a href="#tema">Tema de la semana</a>
-      <a href="#practica">Práctica</a>
-      <a href="#videos">Videos</a>
-      <a href="#extra">Material extra</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-  </div>
-</header>
-
-
+  </header>
 
   <main class="container">
     <!-- Sección tema de la semana -->
     <section id="tema" class="card">
-      <h2>Tema de la semana</h2>
-      <p><strong>[Escribe aquí el tema actual]</strong></p>
-      <ul>
+      <h2 id="tema-titulo">Tema de la semana</h2>
+      <p><strong id="tema-texto">[Escribe aquí el tema actual]</strong></p>
+      <ul id="tema-objetivos">
         <li>Objetivo 1 del tema…</li>
         <li>Objetivo 2 del tema…</li>
         <li>Objetivo 3 del tema…</li>
@@ -52,13 +50,13 @@
     <!-- Sección práctica -->
     <section id="practica" class="card">
       <h2>Práctica recomendada</h2>
-      <ol class="steps">
+      <ol class="steps" id="practica-pasos">
         <li>Lee el enunciado del tema de la semana.</li>
         <li>Realiza los ejercicios 1 y 2 en línea.</li>
         <li>Envía evidencia por Classroom o como lo indiquemos en clase.</li>
       </ol>
 
-      <div class="links-grid">
+      <div class="links-grid" id="practica-links">
         <div class="link-card">
           <h3>Ejercicios interactivos 1</h3>
           <p>Plataforma o página donde practicar los conceptos básicos.</p>
@@ -90,7 +88,7 @@
         Mira estos videos en el orden sugerido. Puedes pausar, retroceder y tomar apuntes en tu cuaderno.
       </p>
 
-      <div class="video-grid">
+      <div class="video-grid" id="videos-grid">
         <div class="video-card">
           <h3>Video 1 – Introducción</h3>
           <p>Explicación general del tema.</p>
@@ -143,5 +141,173 @@
   <footer class="footer">
     <p>Aula de Matemáticas – Profe · Sitio para uso educativo.</p>
   </footer>
+
+  <!-- Script para cambiar contenido según grado -->
+  <script>
+    const gradeTabs = document.querySelectorAll('.grade-tab');
+    const temaTitulo = document.getElementById('tema-titulo');
+    const temaTexto = document.getElementById('tema-texto');
+    const temaObjetivos = document.getElementById('tema-objetivos');
+    const practicaPasos = document.getElementById('practica-pasos');
+    const practicaLinks = document.getElementById('practica-links');
+    const videosGrid = document.getElementById('videos-grid');
+
+    const data = {
+      6: {
+        temaTitulo: 'Tema de la semana – 6.º',
+        temaTexto: 'Números racionales y fracciones',
+        objetivos: [
+          'Reconocer fracciones equivalentes.',
+          'Representar fracciones en la recta numérica.',
+          'Comparar y ordenar fracciones sencillas.'
+        ],
+        practicaPasos: [
+          'Lee el resumen de fracciones en tu cuaderno.',
+          'Resuelve los ejercicios 1 al 10 de la guía.',
+          'Envía foto de la solución por Classroom.'
+        ],
+        practicaLinks: [
+          {
+            titulo: 'Fracciones básicas',
+            desc: 'Ejercicios interactivos de fracciones propias e impropias.',
+            url: 'https://www.ejemplo.com/6-fracciones'
+          },
+          {
+            titulo: 'Equivalencia de fracciones',
+            desc: 'Práctica para encontrar fracciones equivalentes.',
+            url: 'https://www.ejemplo.com/6-equivalentes'
+          },
+          {
+            titulo: 'Quiz de fracciones',
+            desc: 'Autoevaluación corta sobre el tema.',
+            url: 'https://www.ejemplo.com/6-quiz'
+          }
+        ],
+        videos: [
+          {
+            titulo: 'Introducción a las fracciones',
+            desc: 'Conceptos básicos y representación.',
+            url: 'https://www.youtube.com/'
+          },
+          {
+            titulo: 'Fracciones equivalentes',
+            desc: 'Ejemplos explicados paso a paso.',
+            url: 'https://www.youtube.com/'
+          },
+          {
+            titulo: 'Desafíos con fracciones',
+            desc: 'Problemas para que practiques.',
+            url: 'https://www.youtube.com/'
+          }
+        ]
+      },
+      7: {
+        temaTitulo: 'Tema de la semana – 7.º',
+        temaTexto: 'Ecuaciones lineales de una incógnita',
+        objetivos: [
+          'Reconocer una ecuación lineal.',
+          'Resolver ecuaciones simples usando operaciones inversas.',
+          'Aplicar ecuaciones lineales a problemas de contexto.'
+        ],
+        practicaPasos: [
+          'Copia los ejemplos de ecuaciones del tablero.',
+          'Resuelve los problemas 1 al 8 de la guía.',
+          'Sube tus respuestas a Classroom.'
+        ],
+        practicaLinks: [
+          {
+            titulo: 'Ecuaciones básicas',
+            desc: 'Ejercicios interactivos de ecuaciones sencillas.',
+            url: 'https://www.ejemplo.com/7-ecuaciones'
+          },
+          {
+            titulo: 'Problemas con ecuaciones',
+            desc: 'Aplicaciones de ecuaciones a situaciones reales.',
+            url: 'https://www.ejemplo.com/7-problemas'
+          },
+          {
+            titulo: 'Quiz de ecuaciones',
+            desc: 'Autoevaluación de ecuaciones lineales.',
+            url: 'https://www.ejemplo.com/7-quiz'
+          }
+        ],
+        videos: [
+          {
+            titulo: '¿Qué es una ecuación?',
+            desc: 'Introducción y vocabulario básico.',
+            url: 'https://www.youtube.com/'
+          },
+          {
+            titulo: 'Resolución paso a paso',
+            desc: 'Ejercicios resueltos con explicación.',
+            url: 'https://www.youtube.com/'
+          },
+          {
+            titulo: 'Problemas de reto',
+            desc: 'Desafíos para que pongas a prueba lo aprendido.',
+            url: 'https://www.youtube.com/'
+          }
+        ]
+      }
+    };
+
+    function renderGrade(grade) {
+      const info = data[grade];
+
+      temaTitulo.textContent = info.temaTitulo;
+      temaTexto.textContent = info.temaTexto;
+
+      temaObjetivos.innerHTML = '';
+      info.objetivos.forEach(obj => {
+        const li = document.createElement('li');
+        li.textContent = obj;
+        temaObjetivos.appendChild(li);
+      });
+
+      practicaPasos.innerHTML = '';
+      info.practicaPasos.forEach(paso => {
+        const li = document.createElement('li');
+        li.textContent = paso;
+        practicaPasos.appendChild(li);
+      });
+
+      practicaLinks.innerHTML = '';
+      info.practicaLinks.forEach(link => {
+        const div = document.createElement('div');
+        div.className = 'link-card';
+        div.innerHTML = `
+          <h3>${link.titulo}</h3>
+          <p>${link.desc}</p>
+          <a href="${link.url}" target="_blank" rel="noopener">Ir a practicar</a>
+        `;
+        practicaLinks.appendChild(div);
+      });
+
+      videosGrid.innerHTML = '';
+      info.videos.forEach(video => {
+        const div = document.createElement('div');
+        div.className = 'video-card';
+        div.innerHTML = `
+          <h3>${video.titulo}</h3>
+          <p>${video.desc}</p>
+          <a href="${video.url}" target="_blank" rel="noopener">Ver en YouTube</a>
+        `;
+        videosGrid.appendChild(div);
+      });
+    }
+
+    gradeTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        gradeTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const grade = tab.dataset.grade;
+        renderGrade(grade);
+      });
+    });
+
+    // Cargar por defecto 6.º
+    renderGrade('6');
+  </script>
 </body>
 </html>
+
